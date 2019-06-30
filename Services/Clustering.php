@@ -15,15 +15,11 @@ class Clustering {
      * @param string | Tag prefix ex = Cluster,C or etc
      * @param int    | Cluster Number is total cluster do you want *note depends on your centeroid
      */
-	public function __construct($centeroids = array(), $attributes = array(),$prefix){
+    public function __construct($centeroids = array(), $attributes = array(),$prefix){
         $this->centeroids    = $centeroids;
         $this->attributes    = $attributes;
         $this->prefix        = $prefix;
         $this->clusterNumber = count($centeroids);
-    }
-
-    public function __invoke(){
-        
     }
     
     /**
@@ -54,7 +50,7 @@ class Clustering {
             // Use this if want show results of cluster and record
             for($cluster = 0;$cluster < count($results); $cluster++){
                 for($record = 0;$record < count($results[$cluster]); $record++){
-                    echo Sprintf('Cluster %s Record %s : %s <br>', $record+1, $cluster+1, $results[$cluster][$record]);
+                    echo Sprintf('Cluster %s Record %s : %s', $record+1, $cluster+1, $results[$cluster][$record])."\n";
                 }
             }
 
@@ -100,7 +96,7 @@ class Clustering {
 	    }
 
         for($position = 0; $position < count($resultsOfDetermine); $position++){
-            echo Sprintf("Position %s with value %s <br>", $resultsOfDetermine[$position]['position'], $resultsOfDetermine[$position]["value"]);
+            echo Sprintf("Position %s with value %s", $resultsOfDetermine[$position]['position'], $resultsOfDetermine[$position]["value"])."\n";
         }
         
         if(is_array($resultsOfDetermine)){
@@ -124,8 +120,6 @@ class Clustering {
             }
         }catch(Exception $e){
             echo $e->getMessage();
-        }finally{
-            //print("<pre>".print_r($this->attributes,true).'</pre>');
         }
     }
 
@@ -170,8 +164,6 @@ class Clustering {
             return $resultEachRow;
         }catch(Exception $e){
             echo $e->getMessage();
-        }finally{
-            //print("<pre>".print_r($resultEachRow,true).'</pre>');
         }
     }
 
@@ -210,15 +202,12 @@ class Clustering {
         }catch(Exception $e){
             echo $e->getMessage();
         }finally{
-
             foreach($removeDuplicate as $removeKey => $removeValue){
                 foreach($removeValue as $key => $value ){
                     echo $value.' | ';
                 }
-                echo "<br>";
+                echo "\n";
             }
-
-            //print("<pre>".print_r($resultCalculate,true).'</pre>');
         }
 
         if(is_array($orderingMean)){
@@ -255,7 +244,7 @@ class Clustering {
             // Use this if want show results of cluster and record
             for($cluster = 0;$cluster < count($results); $cluster++){
                 for($record = 0;$record < count($results[$cluster]); $record++){
-                    echo Sprintf('Cluster %s Record %s : %s <br>', $record+1, $cluster+1, $results[$cluster][$record]);
+                    echo Sprintf('Cluster %s Record %s : %s', $record+1, $cluster+1, $results[$cluster][$record])."\n";
                 }
             }
 
