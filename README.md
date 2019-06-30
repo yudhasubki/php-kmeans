@@ -44,11 +44,13 @@ $cluster->determineCluster($result);
 
 ## Usage
 
+open terminal :
+
 ```
-php your_file_name.php
+php /your/path/directory/your_file_name.php
 ```
 
-or running in your browser
+or running on your browser
 
 ```
 http://127.0.0.1:8001/your_file_name.php
