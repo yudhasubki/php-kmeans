@@ -1,6 +1,6 @@
 <?php 
 
-include('Services/Clustering.php');
+include('src/Clustering.php');
 
 use Services\KMeans\Clustering;
 
