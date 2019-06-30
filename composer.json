@@ -1,6 +1,7 @@
 {
     "name": "yudhasubki/simple-kmeans-lib",
     "description": "Just simple library kmeans clustering with PHP Native",
+    "minimum-stability": "dev",
     "require": {
         "php": ">=5.3.0"
     },
