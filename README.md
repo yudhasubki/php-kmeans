@@ -2,7 +2,11 @@
 
 K-means clustering is a method of vector quantization, originally from signal processing, that is popular for cluster analysis in data mining.
 
-## How to use
+## Installing
+
+Run ```composer require "yudhasubki/simple-kmeans-lib":"dev-master"```
+
+## Usage
 
 Use the class in folder service then make an instance, example:
 
