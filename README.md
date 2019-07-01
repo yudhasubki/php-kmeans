@@ -13,7 +13,7 @@ Use the class in folder service then make an instance, example:
 ```bash
 <?php
 
-include('Services/Clustering.php');
+require_once('vendor/autoload.php');
 
 use Services\KMeans\Clustering;
 
